@@ -1,0 +1,13 @@
+.list-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-row-value {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.list-row-button {
+  background-color: transparent;
+  border: none;
+}

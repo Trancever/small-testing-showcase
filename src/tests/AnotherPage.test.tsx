@@ -1,11 +1,8 @@
 import React from 'react';
 import { render, waitForElement } from '@testing-library/react';
 import AnotherPage from '../AnotherPage';
-// import API from '../API';
 
 it('Check if API is called and proper content is displayed', async () => {
-  // API.getItems = jest.fn().mockImplementation;
-
   const { rerender, getByTestId } = render(<AnotherPage order="asc" />);
 
   const firstElement = await waitForElement(() => getByTestId('1'));

@@ -21,6 +21,12 @@ const getItems = (page: Props['order']): Promise<Array<Item>> => {
   });
 };
 
+const getUser = () => ({
+  id: 1,
+  name: 'David'
+})
+
 export default {
   getItems,
+  getUser,
 };

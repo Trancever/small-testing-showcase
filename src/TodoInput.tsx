@@ -12,7 +12,12 @@ const TodoInput: React.FC<Props> = (props) => {
 
   return (
     <React.Fragment>
-      <input id="todo-input" type="text" value={value} onChange={(event) => onChange(event.target.value)} placeholder="todo" />
+      <input 
+        id="todo-input"
+        type="text"
+        value={value}
+        onChange={(event) => onChange(event.target.value)} placeholder="todo"
+      />
       <button
         id="add-todo-button"
         onClick={onAdd}

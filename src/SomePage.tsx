@@ -3,13 +3,15 @@ import React, { useEffect } from 'react';
 import GA from './GA';
 
 interface Props {
-  parameter: string;
+  active: boolean;
 }
 
 const SomePage: React.FC<Props> = props => {
   useEffect(() => {
-    GA.trackScreen(props.parameter);
-  }, [props.parameter]);
+    if (props.active) {
+      GA.trackScreen('SomePage');
+    }
+  }, [props.active]);
 
   return (
     <div>

@@ -6,13 +6,13 @@ it('correctly invoke onAdd function on button press', () => {
   const value = '';
   const onAdd = jest.fn();
   const onChange = jest.fn();
-  const { getByText } = render(
+  const { getByText, rerender } = render(
     <TodoInput value={value} onAdd={onAdd} onChange={onChange} />
   );
 
   fireEvent.click(getByText('Add'));
 
-  expect(onAdd).toBeCalledTimes(1);
+  expect(onAdd).toBeCalled();
 });
 
 it("correctly invoke onChange function on input's change event", () => {

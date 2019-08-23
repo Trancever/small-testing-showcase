@@ -20,8 +20,7 @@ const AnotherPage: React.FC<Props> = props => {
       .then(items => {
         setItems(items);
         setLoading(false);
-      })
-      .catch(console.error);
+      });
   }, [props.order]);
 
   return (
